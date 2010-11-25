@@ -1,0 +1,50 @@
+set -g prefix C-a
+
+unbind-key C-b
+bind-key C-a last-window
+bind-key ` last-window
+bind-key a send-prefix
+
+# 0 is too far from ` ;)
+
+bind e previous-window
+bind f next-window
+bind s splitw\; selectl main-vertical
+bind r source-file ~/.tmux.conf
+
+#set -g base-index 1
+set -g bell-action any
+set-option -g default-terminal "xterm-256color"
+set -g display-panes-colour red
+set -g message-bg colour235
+set -g message-fg colour250
+set -g mouse-select-pane on
+set -g pane-border-bg default
+set -g pane-border-fg colour240
+set -g pane-active-border-bg default
+set -g pane-active-border-fg colour253
+set -g repeat-time 500
+set -g set-titles on
+set -g status-bg cyan #colour235
+set -g status-fg colour254
+set -g status-keys vi
+set -g status-justify left
+set -g status-left-length 40
+set -g status-right-length 60
+set -g status-utf8 on
+
+set -g set-titles-string '#H:#S.#I.#P #W #T' # window number,program name,active (or not)
+set -g display-time 3000
+
+set -g visual-activity on
+set -g visual-bell on
+set -g history-limit 4096
+
+setw -g mode-bg colour52
+setw -g mode-fg colour210
+setw -g mode-keys vi
+setw -g mode-mouse on
+setw -g monitor-activity on
+setw -g window-status-current-fg colour231
+setw -g window-status-current-bg black
+setw -g window-status-current-attr bold
